@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZGF-5g-j06">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="FxJ-TK-HZn">
+            <objects>
+                <viewController id="ZGF-5g-j06" customClass="ViewController" customModule="MotionScrollApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pYX-Ug-gck">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7qV-U8-mFt">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="R50-Jn-mNT">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R50-Jn-mNT" id="4bn-5i-JPe">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p99-Xz-d4z">
+                                <rect key="frame" x="16" y="758" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Qnx-ie-BRx"/>
+                                    <constraint firstAttribute="width" constant="60" id="jou-jV-k8v"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="touchDown:" destination="ZGF-5g-j06" eventType="touchDown" id="HKL-kb-Kzz"/>
+                                    <action selector="touchUpInside:" destination="ZGF-5g-j06" eventType="touchUpInside" id="8It-aa-qF3"/>
+                                    <action selector="touchUpOutside:" destination="ZGF-5g-j06" eventType="touchUpOutside" id="JpY-XS-RwK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xP7-TF-5j9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7qV-U8-mFt" firstAttribute="trailing" secondItem="xP7-TF-5j9" secondAttribute="trailing" id="0aD-HZ-Lk9"/>
+                            <constraint firstItem="7qV-U8-mFt" firstAttribute="top" secondItem="xP7-TF-5j9" secondAttribute="top" id="LYM-ho-ecL"/>
+                            <constraint firstItem="p99-Xz-d4z" firstAttribute="bottom" secondItem="xP7-TF-5j9" secondAttribute="bottom" id="SIN-9b-jm9"/>
+                            <constraint firstItem="7qV-U8-mFt" firstAttribute="bottom" secondItem="xP7-TF-5j9" secondAttribute="bottom" id="e8F-PN-DdO"/>
+                            <constraint firstItem="p99-Xz-d4z" firstAttribute="leading" secondItem="xP7-TF-5j9" secondAttribute="leading" constant="16" id="tnP-4A-ib5"/>
+                            <constraint firstItem="7qV-U8-mFt" firstAttribute="leading" secondItem="xP7-TF-5j9" secondAttribute="leading" id="x4s-zI-EUw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="controllButton" destination="p99-Xz-d4z" id="RDQ-sY-IzN"/>
+                        <outlet property="tableView" destination="7qV-U8-mFt" id="rFC-bl-M7w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="io2-56-h0P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-790.07633587786256" y="-54.225352112676056"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
